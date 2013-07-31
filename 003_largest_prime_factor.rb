@@ -1,11 +1,13 @@
+answer = 0
 goal = 600_851_475_143
-i = 1
-array = []
+divisor = 2
 
-while i < goal
-  if goal % i == 0
-    array << 1
+while goal > 1
+  while goal % divisor == 0
+    goal /= divisor
+    answer = divisor
   end
-  i += 1
+  divisor += 1
 end
 
+puts answer
