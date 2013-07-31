@@ -1,18 +1,16 @@
-fibonacci_numbers = [1, 2]
-even_numbers = []
+fibonacci_num = [1, 2]
+even_num = 0
 next_number = 0
 
 while next_number < 4_000_000
-  next_number = fibonacci_numbers[-2..-1].inject { |sum, n| sum + n }
-  fibonacci_numbers << next_number
+  next_number = fibonacci_num[-2..-1].inject { |sum, n| sum + n }
+  fibonacci_num << next_number
 end
 
-fibonacci_numbers.each do |number|
-  if number % 2 == 0
-    even_numbers << number
+fibonacci_num.each do |num|
+  if num % 2 == 0
+    even_num += num
   end
 end
 
-total_even_numbers = even_numbers.inject { |sum, n| sum + n }
-
-puts total_even_numbers
+puts even_num

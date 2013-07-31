@@ -1,9 +1,8 @@
-array = []
-(1...1000).each do |num|
-  if (num % 3 == 0 || num % 5 == 0)
-    array << num
+total = 0
+for i in (1...1000)
+  if i % 3 == 0 || i % 5 == 0
+    total += i
   end
 end
 
-total = array.inject { |sum, n| sum + n }
 puts total
