@@ -11,5 +11,4 @@ while prime.length < 10001
   devisor = number - 1
 end
 
-puts prime.length
 puts prime[10000]
